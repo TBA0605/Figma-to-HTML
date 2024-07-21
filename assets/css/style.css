@@ -54,6 +54,21 @@ a {
   margin-right: auto;
 }
 
+/* tạo dấu ... cho đoạn văn bản quá dài làm phá vỡ cấu trúc */
+.line-clamp{
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp,1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* đoạn văn bản dài quá 2 dòng thì sẽ hiện dấu ... */
+.line-clamp.line-2{
+  --line-clamp: 2;
+}
+
+.break-all{
+  word-break: break-all;
+}
 /* header */
 
 .header {
@@ -292,6 +307,7 @@ a {
   margin-top: 55px;
 }
 .popular .course-item{
+  flex: 1;
   border-radius: 12px;
   background: #fff;
   border: 1px solid #e2dfda;
